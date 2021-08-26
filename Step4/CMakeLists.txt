@@ -31,7 +31,7 @@ target_include_directories(Tutorial PUBLIC
                            )
 
 # for the application we want to install the executable and configured header.
-# cmake --install . --prefix "/Users/florian/Library/Mobile Documents/com~apple~CloudDocs/Projects/CMakeTutorial/Step4_install"
+# Run installation with following command: ``cmake --install . --prefix "/Users/florian/Library/Mobile Documents/com~apple~CloudDocs/Projects/CMakeTutorial/Step4_install"``
 install(TARGETS Tutorial DESTINATION bin)
 install(FILES "${PROJECT_BINARY_DIR}/TutorialConfig.h"
   DESTINATION include
@@ -66,4 +66,4 @@ do_test(Tutorial 25 "25 is 5")
 do_test(Tutorial -25 "-25 is [-nan|nan|0]")
 do_test(Tutorial 0.0001 "0.0001 is 0.01")
 
-# RUN tests using following commands from build directory: ctest -N or ctest -VV   
+# RUN tests using following commands from build directory: ``ctest -N`` or ``ctest -VV``   
